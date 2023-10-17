@@ -11661,11 +11661,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Aluno\\Desktop\\ProjetoDrogas\\ProjetoDrogas\\ProjetoDrogas\\ProjetoDrogas.csproj",
+      "projectUniqueName": "C:\\Users\\Aluno\\Desktop\\ProjetoDrogariaDaBoa\\ProjetoDrogas\\ProjetoDrogas\\ProjetoDrogas\\ProjetoDrogas.csproj",
       "projectName": "ProjetoDrogas",
-      "projectPath": "C:\\Users\\Aluno\\Desktop\\ProjetoDrogas\\ProjetoDrogas\\ProjetoDrogas\\ProjetoDrogas.csproj",
+      "projectPath": "C:\\Users\\Aluno\\Desktop\\ProjetoDrogariaDaBoa\\ProjetoDrogas\\ProjetoDrogas\\ProjetoDrogas\\ProjetoDrogas.csproj",
       "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aluno\\Desktop\\ProjetoDrogas\\ProjetoDrogas\\ProjetoDrogas\\obj\\",
+      "outputPath": "C:\\Users\\Aluno\\Desktop\\ProjetoDrogariaDaBoa\\ProjetoDrogas\\ProjetoDrogas\\ProjetoDrogas\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
