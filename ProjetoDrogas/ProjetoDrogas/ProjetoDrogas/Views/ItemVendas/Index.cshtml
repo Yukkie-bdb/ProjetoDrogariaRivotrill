@@ -1,0 +1,95 @@
+﻿@model IEnumerable<ProjetoDrogas.Models.ItemVenda>
+
+@{
+    ViewData["Title"] = "Index";
+    var id = ViewData["idVenda"];
+}
+
+<h1>Produto</h1>
+
+<p>
+    <a asp-action="Create" asp-route-id="@id" class="btn btn-success">Adicionar novo produto</a>
+</p>
+<p>
+    <a asp-action="Index" asp-controller="Vendas" class="btn btn-secondary">Voltar</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Vendas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Produtos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Preco)
+            </th>
+            <th>
+                Preço (Total)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+            if (id == null)
+            {
+                var precoTotalizado = item.Preco * item.Quantidade;
+
+            <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vendas.Nota)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Produtos.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantidade)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.Preco)
+            </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => precoTotalizado)
+                    </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ItemVendaId" class="btn btn-primary">Editar</a> 
+                <a asp-action="Delete" asp-route-id="@item.ItemVendaId" class="btn btn-danger">Deletar</a>
+            </td>
+                </tr>
+            }
+            else
+            {
+                if (item.VendaId.ToString() == id.ToString())
+                {
+                    var precoTotalizado = item.Preco * item.Quantidade;
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Vendas.Nota)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Produtos.Nome)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Quantidade)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Preco)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => precoTotalizado)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.ItemVendaId" class="btn btn-primary">Editar</a> 
+                            <a asp-action="Delete" asp-route-id="@item.ItemVendaId" class="btn btn-danger">Deletar</a>
+                        </td>
+                    </tr>
+                    }
+            }
+        }
+    </tbody>
+</table>
